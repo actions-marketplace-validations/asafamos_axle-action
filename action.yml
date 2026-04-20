@@ -1,5 +1,5 @@
 name: "axle — Accessibility Compliance CI"
-description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+description: "a11y scanner for every PR. Block merge on WCAG 2.1/2.2 AA regressions. Claude-generated accessibility code fixes. No overlay widget."
 author: "axle"
 branding:
   icon: shield
