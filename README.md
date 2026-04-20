@@ -3,7 +3,7 @@
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-axle-2ea44f?logo=github)](https://github.com/marketplace/actions/axle-accessibility-compliance-ci)
 [![Release](https://img.shields.io/github/v/release/asafamos/axle-action?sort=semver&color=blue)](https://github.com/asafamos/axle-action/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Built for EAA 2025](https://img.shields.io/badge/Built%20for-EAA%202025%20%C2%B7%20ADA%20%C2%B7%20%D7%AA%D7%A7%D7%A0%D7%94%2035-1f6feb)](https://axle-iota.vercel.app?utm_source=axle-action-repo)
+[![Built for EAA 2025 + ADA + Israeli regs](https://img.shields.io/badge/Built%20for-EAA%202025%20%C2%B7%20ADA%20%C2%B7%20Israeli%20regs-1f6feb)](https://axle-iota.vercel.app?utm_source=axle-action-repo)
 
 **Scan every pull request for WCAG 2.1 / 2.2 AA violations and block merges when accessibility regresses. Real source-code fix suggestions via Claude. No overlay widgets.**
 
