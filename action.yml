@@ -7,62 +7,62 @@ branding:
 
 inputs:
   url:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "URL to scan. When empty (default), the Action uses install-command + build-command + start-command to run the project locally and scans http://localhost:<wait-on-port>."
     required: false
     default: ""
   fail-on:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Severity threshold that fails the build. One of: critical | serious | moderate | minor | none. Default: serious."
     required: false
     default: "serious"
   with-ai-fixes:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "If true, Claude Sonnet proposes a code-fix diff for each violation and embeds it in the PR comment. Requires anthropic-api-key."
     required: false
     default: "false"
   max-ai-fixes:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Upper bound on AI fix calls per run (cost guard). Default: 10."
     required: false
     default: "10"
   anthropic-api-key:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Anthropic API key used when with-ai-fixes is true. Pass as a repository secret; never hardcode."
     required: false
   anthropic-model:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Claude model ID used for fix generation. Default: claude-sonnet-4-6."
     required: false
     default: "claude-sonnet-4-6"
   github-token:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Token used to post the PR summary comment. Default: github.token (requires pull-requests: write permission on the workflow)."
     required: false
     default: ${{ github.token }}
   comment-on-pr:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "If true (default), post/update a sticky comment on the PR with the scan summary and (when enabled) AI fix diffs."
     required: false
     default: "true"
   install-command:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Shell command to install dependencies before building locally (used only when url is empty). Default: npm ci."
     required: false
     default: "npm ci"
   build-command:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Shell command to build the project locally (used only when url is empty). Default: npm run build."
     required: false
     default: "npm run build"
   start-command:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Shell command to start the server locally (used only when url is empty). Default: npm start."
     required: false
     default: "npm start"
   wait-on-port:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Port to wait for before running the scan against localhost (used only when url is empty). Default: 3000."
     required: false
     default: "3000"
 
 outputs:
   json-path:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Absolute filesystem path to the machine-readable JSON scan report."
     value: ${{ steps.run.outputs.json-path }}
   markdown-path:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "Absolute filesystem path to the human-readable Markdown scan report."
     value: ${{ steps.run.outputs.markdown-path }}
   failing:
-    description: "Scan every PR for WCAG 2.1/2.2 AA. AI code fixes via Claude. Comment inline. Block merge. No overlay widgets."
+    description: "'true' when at least one violation at or above fail-on severity was found, 'false' otherwise."
     value: ${{ steps.run.outputs.failing }}
 
 runs:
