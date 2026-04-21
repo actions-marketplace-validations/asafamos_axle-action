@@ -22,6 +22,26 @@ That's it. You get a sticky PR comment with every violation grouped by severity,
 
 ---
 
+
+
+## What you get in every PR
+
+![Sticky PR comment with per-violation severity pills and inline AI-suggested code-fix diffs](./assets/pr-comment-mockup.png)
+
+axle posts (and keeps updating) one comment on every PR — severity breakdown at the top, one card per failing rule, and when `with-ai-fixes: "true"` is set, Claude-generated source-code diffs appear inline in the same comment. Merge gets blocked when violations meet or exceed your `fail-on` threshold.
+
+## Same engine in every pipeline
+
+axle ships as a GitHub Action (here), an [npm CLI](https://www.npmjs.com/package/axle-cli), and plugins for [Netlify](https://www.npmjs.com/package/axle-netlify-plugin), [Cloudflare Pages](https://www.npmjs.com/package/axle-cloudflare-plugin), [Vercel](https://www.npmjs.com/package/axle-vercel-plugin), and [WordPress](https://github.com/asafamos/axle/tree/main/packages/axle-wordpress). All use the same axe-core 4.11 engine and the same Claude prompt — so your scan output is identical whether it runs in CI or in your local admin.
+
+![axle homepage hero: Ship accessible code. Automatically.](./assets/homepage.png)
+
+## Hebrew accessibility statement (free)
+
+axle includes a free [Israeli תקנה 35 / EAA statement generator](https://axle-iota.vercel.app/statement) that runs locally in your browser. Published verified statement URLs (`axle-iota.vercel.app/s/<id>`) — the tamper-evident artifact your compliance officer hands a regulator — are on the paid Team plan.
+
+![axle Hebrew accessibility statement generator with RTL form + live preview](./assets/statement-generator.png)
+
 ## Why axle
 
 - **No runtime overlay.** Overlay widgets (the "robot button") cost accessiBe a $1M FTC fine in January 2025 for deceptive practices. axle never injects JavaScript into your production page — it scans, suggests source-code diffs, and lets your merge button decide.
