@@ -127,8 +127,7 @@ runs:
           TARGET="http://localhost:${{ inputs.wait-on-port }}"
         fi
         set +e
-        node dist/ci-scan.js \
-          --url "$TARGET" \
+        node dist/axle.js scan "$TARGET" \
           --fail-on "${{ inputs.fail-on }}" \
           --with-ai-fixes "${{ inputs.with-ai-fixes }}" \
           --max-ai-fixes "${{ inputs.max-ai-fixes }}" \
