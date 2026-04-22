@@ -1,13 +1,15 @@
-# axle — Accessibility Compliance CI
+# axle — a11y / WCAG Accessibility CI
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-axle-2ea44f?logo=github)](https://github.com/marketplace/actions/axle-accessibility-compliance-ci)
 [![Release](https://img.shields.io/github/v/release/asafamos/axle-action?sort=semver&color=blue)](https://github.com/asafamos/axle-action/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Built for EAA 2025 + ADA + Israeli regs](https://img.shields.io/badge/Built%20for-EAA%202025%20%C2%B7%20ADA%20%C2%B7%20Israeli%20regs-1f6feb)](https://axle-iota.vercel.app?utm_source=axle-action-repo)
 
-**Scan every pull request for WCAG 2.1 / 2.2 AA violations and block merges when accessibility regresses. Real source-code fix suggestions via Claude. No overlay widgets.**
+**a11y / WCAG 2.2 AA accessibility CI for GitHub.** Scan every pull request for WCAG 2.1 / 2.2 AA violations and block merges when accessibility regresses. Real source-code fix suggestions via Claude. No overlay widgets.
 
-Built for teams under **EAA 2025**, **ADA**, and **Israeli תקנה 35** enforcement. Runs on `ubuntu-24.04` in ~90 seconds including browser install on a warm cache.
+Built for teams under **EAA 2025**, **ADA Title III**, **Section 508**, and **Israeli תקנה 35** enforcement. Runs on `ubuntu-24.04` in ~90 seconds including browser install on a warm cache.
+
+**Keywords**: a11y, accessibility, WCAG, WCAG 2.2, axe-core, EAA, EAA 2025, ADA, Section 508, EN 301 549, accessibility CI, a11y testing, PR accessibility check, automated accessibility.
 
 ```yaml
 - uses: asafamos/axle-action@v1
