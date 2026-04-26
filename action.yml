@@ -1,5 +1,5 @@
 name: "axle — a11y / WCAG Accessibility CI"
-description: "a11y + WCAG 2.2 AA scanner for every PR. Blocks merges on accessibility regressions. AI code fixes via Claude. Built for EAA 2025, ADA, Section 508. Not an overlay widget."
+description: "a11y / WCAG / accessibility CI for PRs. axe-core scan, Claude AI fixes. EAA 2025, ADA, Section 508."
 author: "axle"
 branding:
   icon: shield
